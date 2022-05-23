@@ -33,8 +33,19 @@ h3::after {content: ''; width: 50vw; height: 2px; background: #fff; position: ab
 .header h1 {font-family: 'Permanent Marker', cursive; font-size: 6em; color: #fcf4d1; padding-bottom: 20px;}
 .header p {font-family: 'Shadows Into Light', cursive; font-size: 2.8em; color: #FFFD98; font-style: italic;}
 
+.split span {
+    opacity: 0;
+    transition: all .3s;
+}
+.split span.show {
+    opacity: 1;
+}
+
 /* section: about me */
-.s-info {padding: 100px 0;}
+.s-info {padding-top: 100px; text-align: left; cursor: default;}
+.s-info p {color: #fff; font-size: 1.24em; line-height: 2.4; transition: .3s all;}
+.s-info p:hover {font-size: 1.6em; line-height: 1.9;}
+.s-info p.email {font-size: 1em; line-height: 3; font-style: italic;}
 
 /* section: skills */
 .s-skills {padding: 100px 0;}
@@ -43,27 +54,27 @@ h3::after {content: ''; width: 50vw; height: 2px; background: #fff; position: ab
 .card .card-title {font-size: 2.2em; font-family: Abel, serif; font-weight: bold; color: #fff; margin-bottom: 10px;}
 .card .card-desc {}
 .card .card-bar {width: 100%; height: 5px; margin-top: 20px; background: #000;}
-.card .card-val {background: #fcf4d1; height: 100%; position: relative;}
-.card .card-val.p70 {width: 70%;}
-.card .card-val.p75 {width: 75%;}
-.card .card-val.p80 {width: 80%;}
-.card .card-val.p85 {width: 85%;}
-.card .card-val.p90 {width: 90%;}
-.card .card-val.p95 {width: 95%;}
-.card .card-val.p100 {width: 100%;}
-.card .card-val-desc {position: absolute; bottom: 5px; right: 0; font-size: 1.04em;}
+.card .card-val {background: #fcf4d1; height: 100%; position: relative; width: 0; transition: all 1s;}
+.card.show .card-val.p70 {width: 70%;}
+.card.show .card-val.p75 {width: 75%;}
+.card.show .card-val.p80 {width: 80%;}
+.card.show .card-val.p85 {width: 85%;}
+.card.show .card-val.p90 {width: 90%;}
+.card.show .card-val.p95 {width: 95%;}
+.card.show .card-val.p100 {width: 100%;}
+.card .card-val-desc {position: absolute; top: 5px; right: 0; font-size: 1.04em;}
 
 
 /* section: projects */
 .s-proj {padding: 100px 0;}
 .project {display: flex; align-items: center; width: 100%; padding: 100px 0; box-sizing: border-box; position: relative;}
-.project .project-img {width: 60%; z-index: 100;}
+.project .project-img {/* width: 60%; */ z-index: 100;}
 .project .project-img img {width: 100%;}
-.project .project-contents {width: 40%;}
-.project .project-contents .project-num {font-size: 30em; position: absolute; bottom: 120px; left: -130px; font-family: 'Archivo Narrow', sans-serif; transform: rotate(-20deg); overflow: hidden;}
+.project .project-contents {/* width: 40%; */}
+.project .project-contents .project-num {font-size: 30em; position: absolute; bottom: 120px; left: -130px; font-family: 'Archivo Narrow', sans-serif; transform: rotate(-20deg);}
 .project .project-contents .project-title {font-family: 'Permanent Marker', cursive; font-size: 3em; border-bottom: 2px solid #fff; color: #fff; text-transform: uppercase; padding-bottom: 30px; margin-bottom: 30px;}
 .project .project-contents .project-desc {text-align-last: center; line-height: 1.5; margin-bottom: 50px;}
 .project .project-contents .project-link {padding: 10px 40px; border: 1.4px dashed #1680ad; border-radius: 30px; transition: all .3s;}
 .project .project-contents .project-link:hover {background: rgba(36, 166, 222, 0.3); border: 1.4px solid #fcf4d1;}
 
-.project:nth-child(even)
+/* .project:nth-child(even) */
