@@ -1,10 +1,29 @@
+//letter tokenizing for all elements of the incoming element
+let tokenize = function(elem) {
+    document.querySelectorAll("." + elem + " .split").forEach(elem => {
+        let text = elem.innerText;
+        let split = text.split('').join("</span><span aria-hidden='true'>");
+        split = "<span aria-hidden='true'>" + split + "</span>";
+        //** aria-hidden to take web standardization into account(screen readers)
+        elem.innerHTML = split;
+        elem.setAttribute("aria-label", text);
+    });    
+};
+
+tokenize("loading");
+document.querySelectorAll(".loading .split span").forEach((span, index) => {
+    setTimeout(() => {
+        span.classList.add("show");
+    }, 50 * index);
+})
+
 // upon page load
 window.onload = function() {
     //once everything has been loaded, remove loading screen
     document.querySelector(".loading").remove();
 
     //header text animation
-    headerTokenize();
+    tokenize("header");
     document.getElementById("header").querySelectorAll(".split span").forEach((span, index) => {
         setTimeout(() => {
             span.classList.add("show");
@@ -29,16 +48,4 @@ window.onload = function() {
             }
         });
     });
-};
-
-//letter tokenizing for all elements of header
-let headerTokenize = function() {
-    document.querySelectorAll("header .split").forEach(elem => {
-        let text = elem.innerText;
-        let split = text.split('').join("</span><span aria-hidden='true'>");
-        split = "<span aria-hidden='true'>" + split + "</span>";
-        //** aria-hidden to take web standardization into account(screen readers)
-        elem.innerHTML = split;
-        elem.setAttribute("aria-label", text);
-    });    
 };
