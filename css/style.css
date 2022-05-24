@@ -69,23 +69,22 @@
 
 /* shared attributes */
 h1, h2, h3, h4 {font-family: "Roboto", sans-serif;}
-h3 { font-size: 3.8em; text-align: center; margin-bottom: 40px; text-transform: uppercase; font-family: 'Archivo Narrow', sans-serif; position: relative;}
-h3::before {content: ''; width: 50vw; height: 2px; background: #fff; position: absolute; top: 0; left: 0;}
-h3::after {content: ''; width: 50vw; height: 2px; background: #fff; position: absolute; bottom: 0; right: 0;}
+h2 { font-size: 3.8em; text-align: center; margin-bottom: 40px; text-transform: uppercase; font-family: 'Archivo Narrow', sans-serif; position: relative;}
+h2::before {content: ''; width: 50vw; height: 2px; background: #fff; position: absolute; top: 0; left: 0;}
+h2::after {content: ''; width: 50vw; height: 2px; background: #fff; position: absolute; bottom: 0; right: 0;}
 
 /* header */
 .header { position: absolute; top: 40%; transform: translate(0, -40%); width: 100%;}
 .header h1 {font-family: 'Permanent Marker', cursive; font-size: 6em; color: #fcf4d1; padding-bottom: 20px;}
 .header p {font-family: 'Shadows Into Light', cursive; font-size: 2.8em; color: #FFFD98; font-style: italic;}
-
-.split span {
+.header .split span {
     opacity: 0;
     display: inline-block;
     transform: translateY(40px);
     min-width: 1vw;
     transition: all .3s;
 }
-.split span.show {
+.header .split span.show {
     transform: translateY(0);
     opacity: 1;
 }
@@ -169,6 +168,9 @@ h3::after {content: ''; width: 50vw; height: 2px; background: #fff; position: ab
 @media (max-width: 1024px) {
     .container {width: 100%;}
 
+    /* header */
+    .header .split span { min-width: 2vw; }
+
     /* section: about me */
     .s-info p:hover {
         background: none;
@@ -197,6 +199,15 @@ h3::after {content: ''; width: 50vw; height: 2px; background: #fff; position: ab
 
 /* viewport width 0 ~ 600px */
 @media (max-width: 600px) {
+    h2 {font-size: 3em;}
+
+    /* header */
+    .header h1 { font-size: 4em; }
+    .header p { font-size: 2em; }
+
+    /* section: about me */
+    .s-info {padding-left: 40px; padding-right: 40px;}
+
     /* nav */
     #nav span {display: none;}
     #nav .menu {float: none; display: flex; justify-content: space-evenly;}
@@ -204,8 +215,14 @@ h3::after {content: ''; width: 50vw; height: 2px; background: #fff; position: ab
 
 /* viewport width 0 ~ 480px */
 @media (max-width: 480px) {
+    h2 {font-size: 2em;}
+
     /* nav */
     #nav .menu li a {font-size: .8em;}
+
+    /* section: skills */
+    .card .card-title {font-size: 2em;}
+    .card .card-desc {padding: 0 10px;}
 
     /* section: projects */
     .project {padding: 0 40px;}
@@ -213,6 +230,10 @@ h3::after {content: ''; width: 50vw; height: 2px; background: #fff; position: ab
 
 /* viewport width 0 ~ 320px */
 @media (max-width: 320px) {
+    /* header */
+    .header h1 { font-size: 2.4em; }
+    .header p { font-size: 1.6em; }
+
     /* section: projects */
     .project {padding: 20px;}
     .project .project-contents .project-title {padding-bottom: 20px;}
