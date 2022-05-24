@@ -95,7 +95,93 @@ h3::after {content: ''; width: 50vw; height: 2px; background: #fff; position: ab
 .project .project-img img {width: 100%;}
 .project .project-contents {/* width: 40%; */}
 .project .project-contents .project-num {font-size: 30em; position: absolute; bottom: 120px; left: -130px; font-family: 'Archivo Narrow', sans-serif; transform: rotate(-20deg);}
-.project .project-contents .project-title {font-family: 'Permanent Marker', cursive; font-size: 3em; border-bottom: 2px solid #fff; color: #fff; text-transform: uppercase; padding-bottom: 30px; margin-bottom: 30px;}
-.project .project-contents .project-desc {text-align-last: center; line-height: 1.5; margin-bottom: 50px;}
+.project .project-contents .project-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3em; color: #fff;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.project .project-contents .project-desc {
+    text-align-last: center;
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
 .project .project-contents .project-link {padding: 10px 40px; border: 1.4px dashed #1680ad; border-radius: 30px; transition: all .3s;}
 .project .project-contents .project-link:hover {background: rgba(36, 166, 222, 0.3); border: 1.4px solid #fcf4d1;}
+
+
+
+
+/* mediaquery */
+/* viewport width 0 ~ 1220px */
+@media (max-width: 1220px) {
+	#contents .container {border: 0;}
+
+    /* section: about me */
+    .s-info p:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1); /* IE9 */
+    }
+    
+    /* section: projects */
+    .s-proj .project .project-img {flex: 7; padding-left: 40px;}
+    .s-proj .project .project-contents {flex: 3;}
+    .s-proj .project .project-contents .project-num {left: -20px; bottom: 150px; font-size: 20em;}
+    .s-proj .project .project-contents .project-title {font-size: 2.2em;}
+}
+
+/* viewport width 0 ~ 1024px */
+@media (max-width: 1024px) {
+    .container {width: 100%;}
+
+    /* section: about me */
+    .s-info p:hover {
+        background: none;
+        transform: none;
+        -webkit-transform: none; /* IE9 */
+    }
+
+    /* section: projects */
+    .project {display: block; padding: 0 100px;}
+    .s-proj .project .project-contents .project-num {left: 100px; top: 0;}
+    .s-proj .project .project-contents .project-title {border: 0; margin-bottom: 0;}
+}
+
+/* viewport width 0 ~ 960px */
+@media (max-width: 960px) {}
+
+/* viewport width 0 ~ 768px */
+@media (max-width: 768px) {
+    /* section: about me */
+    .s-info p {font-size: 1em; line-height: 2;}
+
+    /* section: projects */
+    .s-proj .project .project-img {padding-left: 0;}
+    .s-proj .project .project-contents .project-num {display: none;}
+}
+
+/* viewport width 0 ~ 600px */
+@media (max-width: 600px) {
+    /* nav */
+    #nav span {display: none;}
+    #nav .menu {float: none; display: flex; justify-content: space-evenly;}
+}
+
+/* viewport width 0 ~ 480px */
+@media (max-width: 480px) {
+    /* nav */
+    #nav .menu li a {font-size: .8em;}
+
+    /* section: projects */
+    .project {padding: 0 40px;}
+}
+
+/* viewport width 0 ~ 320px */
+@media (max-width: 320px) {
+    /* section: projects */
+    .project {padding: 20px;}
+    .project .project-contents .project-title {padding-bottom: 20px;}
+    .project .project-contents .project-desc {margin-bottom: 30px;}
+}
