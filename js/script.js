@@ -1,5 +1,8 @@
 // upon page load
-addEventListener("DOMContentLoaded", function () {
+window.onload = function() {
+    //once everything has been loaded, remove loading screen
+    document.querySelector(".loading").remove();
+
     //header text animation
     headerTokenize();
     document.getElementById("header").querySelectorAll(".split span").forEach((span, index) => {
@@ -26,7 +29,7 @@ addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-});
+};
 
 //letter tokenizing for all elements of header
 let headerTokenize = function() {
