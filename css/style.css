@@ -214,8 +214,8 @@ h2::after {content: ''; width: 50vw; height: 2px; background: #fff; position: ab
 
     /* section: project */
     .project .project-contents .project-title {font-size: 5em;}
-    .project .project-contents .project-desc {font-size: 2em;}
-    .project .project-contents .project-link {font-size: 2em;}
+    .project .project-contents .project-desc {font-size: 1.4em;}
+    .project .project-contents .project-link {font-size: 1.6em;}
 }
 
 /* viewport width 0 ~ 480px */
