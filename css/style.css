@@ -201,6 +201,10 @@ h2::after {content: ''; width: 50vw; height: 2px; background: #fff; position: ab
 @media (max-width: 600px) {
     h2 {font-size: 3em;}
 
+    /* nav */
+    #nav span {display: none;}
+    #nav .menu {float: none; display: flex; justify-content: space-evenly;}
+
     /* header */
     .header h1 { font-size: 4em; }
     .header p { font-size: 2em; }
@@ -208,9 +212,10 @@ h2::after {content: ''; width: 50vw; height: 2px; background: #fff; position: ab
     /* section: about me */
     .s-info {padding-left: 40px; padding-right: 40px;}
 
-    /* nav */
-    #nav span {display: none;}
-    #nav .menu {float: none; display: flex; justify-content: space-evenly;}
+    /* section: project */
+    .project .project-contents .project-title {font-size: 5em;}
+    .project .project-contents .project-desc {font-size: 2em;}
+    .project .project-contents .project-link {font-size: 2em;}
 }
 
 /* viewport width 0 ~ 480px */
