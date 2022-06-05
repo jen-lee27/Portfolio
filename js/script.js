@@ -48,4 +48,14 @@ window.onload = function() {
             }
         });
     });
+
+    //upon navigation menu click
+    document.querySelectorAll(".menu li:nth-child(n+2):nth-child(-n+3) a").forEach(elem => {
+        elem.addEventListener("click", e => {
+            e.preventDefault();
+            document.querySelector(elem.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
 };
