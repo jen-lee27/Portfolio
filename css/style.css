@@ -146,6 +146,7 @@ h2::after {content: ''; width: 50vw; height: 2px; background: #fff; position: ab
 
 /* section: wtp100 */
 .s-wtp {padding-bottom: 100px;}
+.s-wtp p {line-height: 2; font-size: 1.2em;}
 
 
 
