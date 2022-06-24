@@ -50,7 +50,7 @@ window.onload = function() {
     });
 
     //upon navigation menu click
-    //document.querySelectorAll(".menu li:nth-child(n+3):nth-child(-n+4) a").forEach(elem => {
+    //document.querySelectorAll(".menu li:nth-child(n+2):nth-child(-n+3) a").forEach(elem => {
     document.querySelectorAll(".menu li:nth-child(n+3):nth-child(-n+4) a").forEach(elem => {
         elem.addEventListener("click", e => {
             e.preventDefault();
