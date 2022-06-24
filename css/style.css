@@ -144,6 +144,9 @@ h2::after {content: ''; width: 50vw; height: 2px; background: #fff; position: ab
 .project .project-contents .project-link:hover {background: rgba(36, 166, 222, 0.3); border: 1.4px solid #fcf4d1;}
 
 
+/* section: wtp100 */
+.s-wtp {padding-bottom: 100px;}
+
 
 
 /* mediaquery */
